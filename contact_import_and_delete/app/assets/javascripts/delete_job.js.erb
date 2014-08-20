@@ -1,0 +1,25 @@
+$( document ).ready(function() {
+        $('.table.table-striped').on('click','.btn.btn-default',function(){
+            var self = this;
+            var contact_id = $(this).attr("data-contact-id");
+            var contact = {id: contact_id};        
+            $.ajax({
+              url: '<%= Rails.application.routes.url_helpers.contact_destroy_path %>',
+              type: 'POST',
+              data: contact,
+              dataType: "json",
+              error: function(){
+                alert("Sorry, that contact could not be deleted.")
+              },
+              success: function(){
+                var tr = $(self).closest('tr');
+                tr.css("background-color","#FF3700");
+                tr.fadeOut(400, function(){
+                  tr.remove();
+                }); 
+                return false;
+                }
+            });
+        });
+});
+  

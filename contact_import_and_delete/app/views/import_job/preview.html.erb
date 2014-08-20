@@ -1,0 +1,18 @@
+<div class="jumbotron" id="map">
+	<h3>Map Headers to Contact Fields</h3>
+	<%=form_tag import_job_create_path do %>
+		<table class="table table-bordered">
+			    <tr>
+				  <th>.csv Header</th>
+			      <th>Clio Contact Field</th>
+			    </tr>
+			<%@csv_arr.first.each do |elem|%>		
+				<tr>
+	              <td><%= elem %></td>
+	              <td><%= render 'import_job/form', :key => "#{elem}" %></td>
+	            </tr>
+			<%end%>
+		</table>
+	  <%=submit_tag "Create Contacts"%>
+	<%end%>
+</div>

@@ -1,0 +1,22 @@
+== README
+
+Rails app for importing a .csv file of contacts into Clio
+
+Set up and implementation details:
+
+* Ruby version 2.1.1
+
+* Set your client_id and client_secret in config/config.yml
+
+* The current implementation allows for only one address per contact
+
+* Multiple phone_numbers,email_addresses,instant_messengers and web_sites are implemented, however they will all be of type "Work"
+
+* The undo .csv import action relies on the .csv file containing the Clio contact ids in the first column
+
+* All the files for the current session will be stored in a sub-directory of tmp/client_folders with the session token as the folder name
+
+* The uploaded .csv files will have a time stamp appended to the original file name  
+
+
+

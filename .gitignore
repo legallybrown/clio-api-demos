@@ -20,3 +20,4 @@ config/config.yml
 
 # Ignore .DS_Store
 .DS_Store
+.keep

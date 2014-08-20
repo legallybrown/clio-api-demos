@@ -1,0 +1,50 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ @import "jquery.selectbox";
+
+body {
+	background-color:#97D6FF;
+	background-repeat: repeat;
+	background-size: 100%;
+}
+
+#header{
+	background-color: #47A3FF;
+	height:100px;
+	width: 1054px;
+	padding:0;
+	margin:0;
+  border-radius: 25px;
+}
+
+#header h1{
+	color:white;
+	font-weight:200;
+	margin-top: 0;
+	margin-left: 1em;
+}
+
+.jumbotron{
+	border-radius: 25px;
+}
+
+.btn.btn-default.dropdown-toggle{
+	width:175px;
+	margin-right:5px; 
+}
+

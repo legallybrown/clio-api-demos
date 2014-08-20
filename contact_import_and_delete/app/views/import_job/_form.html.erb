@@ -1,0 +1,6 @@
+
+<% default_value = FuzzyMatch.new(["first_name","last_name","title","city","province","postal_code","country","street","phone_number","web_site","email_address","instant_messenger"]).find(key)%>
+
+
+<%= select_tag("#{key}", options_for_select([["",nil],['First Name', "first_name"], ['Last Name', "last_name"],["Title","title"],["City","city"],["Street","street"],["Postal Code","postal_code"],["Province","province"],
+["Country","country"],["Phone Number","phone_number"],["Web Site Address","web_site"],["Email Address","email_address"],["Instant Messenger Address","instant_messenger"]], selected: default_value),:class => "btn btn-default dropdown-toggle") %>
